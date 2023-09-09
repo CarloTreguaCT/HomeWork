@@ -1,0 +1,121 @@
+.feed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 100vh;
+    margin-top: 100px;
+  /*  background-color: #fff;*/
+    overflow: hidden;
+    overflow-x: none;
+    overflow-y: auto;
+    z-index: 1;
+}
+.post-container{
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+    width: 25vw;
+    background-color:#162938;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    margin: 20px 20px;
+    overflow: hidden;
+}
+
+.post-email{
+    text-transform: uppercase;
+    display: flex;
+    margin: 10px;
+    justify-content:center;
+    align-items: top;
+    padding: 3px 5px;
+    border-radius: 3px;
+    height: fit-content;
+    width: fit-content;
+    overflow: hidden;
+    font-size: 1em;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.post-img{
+    width: 90%;
+    height: 50%;
+    /*border: 1px solid black;*/
+    margin: 10px;
+    border-radius: 10px;
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-caption{
+    width: 90%;
+    height: 20%;
+    margin-bottom: 10px;
+    /*border: 1px solid black;*/
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+}
+
+.post-save{
+    width: 90%;
+    height: 10%;
+    margin-bottom: 10px;
+    /*border: 1px solid black;*/
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.btn-save{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2em;
+    margin-right: 10px;
+    padding: 5px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    grid-row-end: 1;
+    grid-column-end: 3;
+    visibility: visible;
+}
+
+.btn-saved{
+    text-transform: uppercase;
+    color: red;
+    font-size: 2em;
+    margin-right: 10px;
+    padding: 5px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    visibility: hidden;
+    grid-row-end: 1;
+    grid-column-end: 3;
+}
+
+
+
+@media screen and (max-width:1150px){
+    .feed{
+        width: 80vw;
+    }
+    .post-container{
+        height: 70vh;
+        width: 55vw;
+    }
+    
+}
+
+
+@media screen and (max-width:350px){
+    .post-email{
+       font-size: 0.7em;
+       /*margin-bottom: -20px;*/
+    }
+    
+}
