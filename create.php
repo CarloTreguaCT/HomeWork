@@ -13,7 +13,7 @@ if(!isset($_SESSION["email"]))
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="post.css">
     <script src="index.js" defer></script>
-    <script src="post.js" defer></script>
+    <script src="image.js" defer></script>
     
 </head>
 <body>
@@ -32,17 +32,17 @@ if(!isset($_SESSION["email"]))
         </div>
     </nav>
     </header>
-    <div class="feed">
-            <div class="post-container">
-                <div class="post-email">Carlo.t02@hotmail.com</div>
-                <div class="post-img"></div>
-                <div class="post-caption">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
-                <div class="post-save">
-                    <div class="btn-save"><ion-icon name="heart-outline"></ion-icon></div>
-                    <div class="btn-saved"><ion-icon name="heart-sharp"></ion-icon></div>    
+    <div class="create-post">
+        <div class="selection-container">
+                <div class="image-search">
+                    <input type="text" class="post-input">
+                    <button class="btn-post">SEARCH</button>
                 </div>
-            </div>
-      
+                    <div class="image-container"></div>
+                    <button class="btn-continue">Continue</button>
+        </div>
+            
+
     </div>
 
 

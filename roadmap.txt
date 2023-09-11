@@ -1,0 +1,20 @@
+Proximos pasos a seguir:
+Realizar API'S:
+-utilizar unsplash para la generacion de imagenes
+-utilizar la api de spotify con OAUTH2 para elegir un sonido que vaya 
+con la imagen
+Conectar las API'S al DB:
+-Con la imagen y el sonido seleccionados generar el post, que serà
+publicado por nuestro usuario, (los ultimos 30 posts seràn mostrados
+en el feed)
+Hacer perfil y creacion del post:
+-Hacer una pagina que sea el perfil de un usuario donde se 
+puedan visualizar los posts que fueron publicados y
+eliminarlos
+-hacer una pagina con los posts salvados que muestre
+todo lo que un usuario ha salvado y con un simple click del corazon rojo
+elimine el post de los salvados de nuestro usuario
+Estilizar todo:
+-hacer todo resizable una vez que este listo todo el proyecto
+y terminar los ultimos toques estilisticos.
+Hacer Porting y realizar los esquemas:

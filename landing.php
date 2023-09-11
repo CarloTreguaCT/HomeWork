@@ -131,8 +131,8 @@ if (
     <nav class="navigation">
     <div class="dropDown"><ion-icon name="menu"></ion-icon></div>
     <div class="container">
-        <a href="#">Home</a>
-        <a href="#">About</a>
+        <a href="index.php">Feed</a>
+        <a href="create.php">Create</a>
         <a href="#">Services</a>
         <a href="#">Contact</a>
         <button class="btnLogin-popup">Login</button>
