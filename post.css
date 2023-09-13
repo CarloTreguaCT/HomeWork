@@ -147,12 +147,21 @@
 .btn-post{
     height: 25px;
 }
+.btn-post-s{
+    height: 25px;
+}
+
+.noImage{
+    background-color: #162938;
+    color: #fff;
+}
 
 .post-image{
 width: fit-content;
 height: 70%;
 margin: 10px;
 border: 3px solid #fff;
+object-fit: cover;
 border-radius: 6px;
 display: flex;
 flex-direction: row;
@@ -185,6 +194,14 @@ cursor: pointer;
     color: #fff;
     visibility: hidden;
 }    
+
+
+.create{
+    background-color: #162938;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
 
 
 @media screen and (max-width:1150px){
