@@ -133,8 +133,8 @@ if (
     <div class="container">
         <a href="index.php">Feed</a>
         <a href="create.php">Create</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
+        <a href="#">Profile</a>
+        <a href="#">Saved</a>
         <button class="btnLogin-popup">Login</button>
         </div>
     </nav>

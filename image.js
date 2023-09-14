@@ -109,8 +109,11 @@ function jsonSpotify(json){
                 img.classList.remove('active');
             }
             image.classList.add('active');
+            finalSoundSRC = preview;
+            
         });
     }
+
 
 
     proceed.addEventListener('click', () => {
@@ -121,6 +124,60 @@ function jsonSpotify(json){
         const final = document.querySelector('.create-post')
         container.innerHTML = "";
         final.classList.add('create');
+        const finalPost = document.createElement('div');
+        finalPost.classList.add('post');
+        const finalImage = document.createElement('img');
+        finalImage.classList.add('final-image');
+        finalImage.src = finalImageSRC;
+        const finalSound = new Audio(finalSoundSRC);
+        const postChoose = document.createElement('div');
+        postChoose.classList.add('post-choose');
+        const createPost = document.createElement('div')
+        const restartPost = document.createElement('div')
+
+        createPost.classList.add('btn-create');
+
+        createPost.innerHTML = "<ion-icon name='checkmark-circle'></ion-icon>"
+
+        restartPost.classList.add('btn-restart');
+
+        restartPost.innerHTML = "<ion-icon name='refresh-circle'></ion-icon>"
+
+        postChoose.appendChild(restartPost);
+        postChoose.appendChild(createPost);
+
+        
+            
+        finalPost.appendChild(finalImage);
+        finalPost.appendChild(finalSound);
+        finalPost.appendChild(postChoose);
+        finalImage.addEventListener('click', togglePlay);
+
+        var isPlaying = false;
+        function togglePlay(){
+            isPlaying ? finalSound.pause() : finalSound.play();
+        }
+
+        finalSound.onplaying = function(){
+            isPlaying = true;
+        }
+
+        finalSound.onpause = function(){
+            isPlaying = false;
+        }
+
+
+        container.appendChild(finalPost);
+
+
+        restartPost.addEventListener('click', () => {
+            window.location.reload();
+        })
+
+        createPost.addEventListener('click', () => {
+            
+        })
+        
     }    }    );
     
 }
@@ -216,13 +273,15 @@ function jsonSearch(json){
 })
 }
 
-
-
+var finalImageSRC = "";
+var finalSoundSRC = "";
 
 function checkSelection(){
     const selection = document.querySelector('.post-image.active');
+    finalImageSRC = selection.src; 
     return selection.src;
 }
+
 
 
 

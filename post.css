@@ -168,6 +168,37 @@ flex-direction: row;
 cursor: pointer;
 }
 
+.post{
+    border: 3px solid #fff;
+    border-radius: 6px;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    overflow: hidden;
+    }
+
+.final-image{
+    border: 3px solid #fff;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.post-choose{
+    margin-top: 10px;
+    height: 18%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .error{
     text-align: center;
     width: fit-content;
@@ -202,6 +233,30 @@ cursor: pointer;
     height: 100vh;
     margin: 0px;
 }
+
+.btn-create{
+    font-size: 3em;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.btn-restart{
+    font-size: 3em;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.btn-create:hover{
+    color: lightgreen;
+}
+
+.btn-restart:hover{
+    color:red;
+}
+
+
 
 
 @media screen and (max-width:1150px){
