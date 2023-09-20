@@ -12,6 +12,8 @@
     overflow-y: auto;
     z-index: 1;
 }
+
+
 .post-container{
     display: flex;
     justify-content: top;

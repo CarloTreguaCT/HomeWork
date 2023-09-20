@@ -1,12 +1,9 @@
 <?php
+
 session_start();
-if(!isset($_SESSION["email"]))
+if(!isset($_SESSION["email"])){
     header("Location: landing.php");
-
-require_once "database.php";
-
-$query = "SELECT * FROM posts";
-$result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+}
 ?>
 
 <!DOCTYPE html>
@@ -18,12 +15,12 @@ $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="feed.css">
     <script src="index.js" defer></script>
-    <script src="post.js" defer></script>
+    <script src="saved.js" defer></script>
     
 </head>
 <body>
     <header>
-    <h2 class='email'><?php echo $_SESSION["email"]; ?>
+    <h2 class='email'><?php echo $_SESSION["email"];?>
     </h2>
 
     <nav class="navigation">

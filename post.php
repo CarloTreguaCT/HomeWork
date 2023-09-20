@@ -1,10 +1,34 @@
 
 <?php
 
-    $conn = mysqli_connect("localhost", "root", "", "login_register");
-    $query = "SELECT * FROM POSTS";
-    $res = mysqli_query($conn, $query);
-    $num_rows = mysqli_num_rows($res);
+require_once "database.php";
+
+
+    if(isset($_POST)){
+    
+
+
+        $data = file_get_contents("php://input");
+        $creation = json_decode($data, true);
+        $image = $creation["image"];
+        $sound = $creation["sound"];
+        $id = $creation["id"];
+        
+/*
+        $q = "SELECT id FROM users WHERE email = '".$_SESSION["email"]."'";
+        $res = mysqli_query($conn, $q) or die(mysqli_error($conn));
+        $row = mysqli_fetch_assoc($res);        
+        $author = $row;*/
+          
+        
+        $query = "INSERT INTO posts (user_id, img, sound) VALUES ('$id', '$image','$sound')";
+        $result = mysqli_query($conn, $query) or die(mysqli_error($conn));
+        
+        
+
+        
+        
+    }
 
      
 
@@ -35,8 +59,6 @@
 
      */
 
-     /*
-     crear selector de imagenes con unsplash y selector de sonidos con spotify, utilizar oauth2 para la obtencion de datos de 
-     spotify haciendo la API con php y la API de unsplash con js*/
+    
 
 ?>

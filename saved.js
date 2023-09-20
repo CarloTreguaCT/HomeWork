@@ -1,7 +1,3 @@
-
-
-
-
 function onResponse(response){
     console.log("Risposta ricevuta");
     console.log(response);
@@ -43,14 +39,9 @@ function onResponse(response){
 
         btn_saved.innerHTML = "<ion-icon name='heart'></ion-icon>"
 
-
-        $post_id = json[i].id
-
         btn_save.addEventListener('click', () => {
             btn_save.style.visibility = "hidden";
             btn_saved.style.visibility = "visible";
-
-            fetch("saving.php?id="+encodeURIComponent($post_id));
         })
         
         btn_saved.addEventListener('click', () => {
@@ -80,9 +71,6 @@ function onResponse(response){
             post.classList.remove('playing');
         }
 
-        
-
-
 
 
         post_btn.appendChild(btn_save);
@@ -90,7 +78,7 @@ function onResponse(response){
         post.appendChild(image);
         post.appendChild(preview);
         post.appendChild(post_btn);
-
+        
 
 
 
@@ -109,4 +97,4 @@ function onResponse(response){
 
 
 
-fetch("feed.php").then(onResponse).then(onJSON);
+fetch("save.php").then(onResponse).then(onJSON);

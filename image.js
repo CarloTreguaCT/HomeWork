@@ -173,10 +173,70 @@ function jsonSpotify(json){
         restartPost.addEventListener('click', () => {
             window.location.reload();
         })
+/* 
 
-        createPost.addEventListener('click', () => {
-            
+        ricordare come risoluzione del problema per quanto
+        riguardava la ricezione dello user id
+
+        var textId = fetch("getid.php");
+
+       
+       
+       var id = textId.then(function(response){
+            return response.text();
         })
+
+        id.then(function(text){
+            console.log(text);
+        })
+ */
+       
+
+        fetch("getid.php").then(idResponse).then(textId);
+
+        function idResponse(response){
+            return (response.ok ? response.text() : null);
+        }
+
+        function textId(text){
+            console.log(text);
+            const hero = text;
+
+
+
+
+            createPost.addEventListener('click', () => {
+            
+                let post_object = {
+                    image: finalImageSRC,
+                    sound: finalSoundSRC,
+                    id: hero,
+                }
+                
+                console.log(post_object);
+    
+                fetch("post.php", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(post_object)
+                })/*.then(function(response){
+                    return response.text();
+                }).then(function(text){
+                    console.log(text);
+                })*/
+                
+                window.location.href = "index.php"; 
+             })
+
+
+        }
+
+        
+
+
+
         
     }    }    );
     

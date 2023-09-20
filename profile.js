@@ -1,7 +1,3 @@
-
-
-
-
 function onResponse(response){
     console.log("Risposta ricevuta");
     console.log(response);
@@ -109,4 +105,4 @@ function onResponse(response){
 
 
 
-fetch("feed.php").then(onResponse).then(onJSON);
+fetch("getProfile.php").then(onResponse).then(onJSON);
